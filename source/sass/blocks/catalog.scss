@@ -1,0 +1,47 @@
+.catalog {
+  background-color: $color-default-white;
+}
+
+.catalog__inner {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  @include vp-1023 {
+    padding-bottom: 40px;
+  }
+}
+
+.catalog__button {
+  min-width: 200px;
+
+  @include vp-1023 {
+    min-width: 100%;
+  }
+}
+
+.catalog__button.is-active {
+  color: $color-default-white;
+  background-color: $color-default-white;
+}
+
+@media (hover: hover), screen and (min-width: 0\0) {
+  .catalog__button.is-active:hover {
+    background-color: $color-default-white;
+    color: $color-default-white;
+  }
+}
+
+.show {
+  opacity: 0;
+  animation: show .3s .2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0%{
+  opacity:0;
+  }
+  100% {
+  opacity:1;
+  }
+}
