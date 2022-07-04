@@ -42,7 +42,7 @@ module.exports = {
           presets: ['@babel/preset-env'],
         },
       },
-      /*{
+      {
         test: /\.(woff|woff2|ttf|otf|eot)$/,
         type: 'asset/resource',
         generator: {
@@ -55,14 +55,14 @@ module.exports = {
         generator: {
           filename: 'assets/img/[name][ext]'
         }
-      }*/
+      }
     ],
   },
     plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.min.css',
     }),
-    /*new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { from: "source/img", to: "img" },
@@ -73,7 +73,7 @@ module.exports = {
     }),
     new ImageminPlugin({
       test: /\.(jpe?g|png)$/i
-    }),*/
+    }),
   ],
   optimization: {
     minimizer: [
