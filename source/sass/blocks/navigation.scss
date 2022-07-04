@@ -29,7 +29,7 @@
   width: 19px;
   height: 19px;
   left: 8px;
-  bottom: 8px;
+  top: 10px;
 }
 
 .navigation__list {
@@ -41,6 +41,11 @@
   background-color: $color-nero;
   margin-left: 59px;
   width: 100%;
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .navigation__item {
@@ -76,4 +81,11 @@
   padding: 10px 14px;
   background-color: $color-tangerin-yellow;
   border-radius: 0 8px 8px 0;
+
+  @include vp-1023 {
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    display: flex;
+  }
 }
