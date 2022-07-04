@@ -57,6 +57,12 @@
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1085px)  {
+  .navigation__list  {
+    grid-column-gap: 0;
+  }
+}
+
 .navigation__item.is-active {
   background-color: $color-tangerin-yellow;
   pointer-events: none;
