@@ -1,0 +1,73 @@
+.navigation {
+  display: flex;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: $color-nero;
+  width: 100%;
+}
+
+.navigation__label {
+  position: relative;
+  background-color: $color-tangerin-yellow;
+  border-radius: 4px 0 0 4px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+.navigation__label input {
+  border: none;
+  height: 100%;
+  background-color: $color-tangerin-yellow;
+  border-radius: 4px 0 0 4px;
+}
+
+.navigation__label::before {
+  position: absolute;
+  content: '';
+  background-image: url('../img/svg/icon-search.svg');
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 19px;
+  left: 8px;
+  bottom: 8px;
+}
+
+.navigation__list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(42px, max-content));
+  background-color: $color-nero;
+  margin-left: 59px;
+  width: 100%;
+}
+
+.navigation__item {
+  padding: 9px 19px;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .navigation__item {
+    padding: 9px 9px;
+  }
+
+  .navigation__list  {
+    grid-column-gap: 10px;
+  }
+}
+
+.navigation__item.is-active {
+  background-color: $color-tangerin-yellow;
+  pointer-events: none;
+}
+
+.navigation__item.is-active .navigation__link {
+  color: $color-default-black;
+}
+
+.navigation__link--big {
+  padding: 10px 14px;
+  background-color: $color-tangerin-yellow;
+  border-radius: 0 8px 8px 0;
+}

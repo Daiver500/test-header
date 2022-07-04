@@ -55,7 +55,7 @@ const instrumentsArray = [
 
 ];
 
-const cardsWrapper = document.querySelector('.cards-list');
+const cardsWrapper = document.querySelector('.catalog-list');
 
 const createCards = () => {
 
@@ -63,15 +63,19 @@ const createCards = () => {
     const newCard = document.createElement('li');
     newCard.classList.add('catalog-card');
     newCard.innerHTML = `
-      <picture class="catalog-card__picture">
+    <div class="catalog-card__image-wrapper">
+      <picture>
         <source type="image/webp" srcset="${item.webp}, ${item.webp2x}" />
         <img class="catalog-card__image" src="${item.photo}" srcset="${item.photo2x}" alt="employer card" width="300" height="300">
       </picture>
-      <div class="catalog-card__details">
-        <p class="title title--medium catalog-card__title">${item.title}</p>
-        <p class="catalog-card__text">${item.text}</p>
+    </div>
+    <div class="catalog-card__details">
+      <p class="title title--medium catalog-card__title">${item.title}</p>
+      <div class="catalog-card__text">
+        <p>${item.text}</p>
       </div>
-      <a href="#" class="link catalog-card__link" aria-label="ссылка на инструмент" target="_blank"></a>`;
+    </div>
+    <a href="#" class="link catalog-card__link" aria-label="ссылка на инструмент" target="_blank"></a>`;
     cardsWrapper.append(newCard);
   };
 

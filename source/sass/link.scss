@@ -1,0 +1,52 @@
+.link {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-nero;
+  letter-spacing: -0.01em;
+  transition: 0.3s ease;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+.link--small {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.link--white {
+  color: $color-default-white;
+  letter-spacing: unset;
+}
+
+.link--big {
+  text-transform: uppercase;
+  letter-spacing: unset;
+}
+
+.link--white,
+.link--big {
+  font-weight: 600;
+}
+
+.link--underline {
+  text-decoration: underline;
+}
+
+.link--dashed-underline {
+  text-decoration: underline dashed;
+}
+
+.link--social {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-nero;
+      opacity: 1;
+    }
+  }
+}
